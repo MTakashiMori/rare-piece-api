@@ -13,12 +13,10 @@ Homestead.yaml
 npm-debug.log
 yarn-error.log
 docker-compose.override.yml
-*/DS.Store 
+*/DS.Store
 DS.Store
 .DS_Store
 postgis/
 public/js/
 public/css/
 .env
-coverage
-.nyc_output

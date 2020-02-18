@@ -15,14 +15,6 @@ else
     php artisan migrate:fresh --seed
 fi
 
-if [ -e node_modules ]
-then
-    echo "************** node_modules already installed **************"
-else
-    echo "************** Installing node_modules **************"
-    npm install
-fi
-
 echo "************** Generating key and refreshing  **************"
 php artisan key:generate
 php artisan config:cache

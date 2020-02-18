@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Model;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Query\Builder;
 use Illuminate\Support\Facades\DB;
+use Ramsey\Uuid\Uuid;
 use Exception;
 
 /**
@@ -13,6 +14,25 @@ use Exception;
  */
 class ModelAbstract extends Model
 {
+    /**
+     *
+     * @var boolean
+     */
+    public $incrementing = false;
+
+    /**
+     *
+     * @return void
+     */
+    protected static function boot()
+    {
+        parent::boot();
+
+        static::creating(function($model) {
+            $model->id = Uuid::uuid4();
+        });
+    }
+
     /**
      * @param $query Builder
      * @param $param
@@ -76,4 +96,5 @@ class ModelAbstract extends Model
         return;
     }
 
+    
 }
