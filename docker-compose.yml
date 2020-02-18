@@ -18,6 +18,8 @@ services:
             main:
                 aliases:
                     - web
+        depends_on:
+            - db
     db:
         container_name: rare-piece-db
         image: mariadb:10.4
