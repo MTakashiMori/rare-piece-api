@@ -7,8 +7,8 @@ services:
     ports:
         - "3306:3306"
     volumes:
-        # - /Users/takashi/Database/rare-piece-db:/var/lib/mysql
-        - /var/www/db/rare-piece-db:/var/lib/mysql
+        - /Users/takashi/Database/rare-piece-db:/var/lib/mysql
+        # - /var/www/db/rare-piece-db:/var/lib/mysql
     environment:
         MYSQL_ROOT_PASSWORD: 06041944
         MYSQL_DATABASE: rare_piece_db
