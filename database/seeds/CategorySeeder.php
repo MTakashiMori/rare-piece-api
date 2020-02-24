@@ -19,7 +19,7 @@ class CategorySeeder extends Seeder
         foreach($beltsCategory as $category) {
             factory(Category::class)->create([
                 'name' => $category,
-                'department_id' => $maleGroup->id,
+                'group_id' => $maleGroup->id,
                 'description' => ('A belt from ' . $category)
             ]);
         }
@@ -30,7 +30,7 @@ class CategorySeeder extends Seeder
         foreach($makeupCategory as $category) {
             factory(Category::class)->create([
                 'name' => $category,
-                'department_id' => $makeupGroup->id,
+                'group_id' => $makeupGroup->id,
                 'description' => ('A makeup from ' . $category)
             ]);
         }
@@ -42,7 +42,7 @@ class CategorySeeder extends Seeder
         foreach($bathItensCategory as $category) {
             factory(Category::class)->create([
                 'name' => $category,
-                'department_id' => $bathItensGroup->id,
+                'group_id' => $bathItensGroup->id,
                 'description' => ('A bath item')
             ]);
         }

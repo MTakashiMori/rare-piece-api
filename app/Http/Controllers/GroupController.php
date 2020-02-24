@@ -3,9 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Services\GroupService;
-use Illuminate\Http\Request;
 
-class GroupController extends Controller
+class GroupController extends AbstractController
 {
     public function __construct(GroupService $service)
     {

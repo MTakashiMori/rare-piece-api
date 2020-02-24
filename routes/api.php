@@ -15,5 +15,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::group(['prefix' => 'v1'], function () {
+
     Route::resource('department', 'DepartmentController');
+    Route::resource('group', 'GroupController');
+    Route::resource('category', 'CategoryController');
+
 });
