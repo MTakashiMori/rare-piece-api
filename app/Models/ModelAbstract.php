@@ -29,7 +29,7 @@ class ModelAbstract extends Model
         parent::boot();
 
         static::creating(function($model) {
-            $model->id = Uuid::uuid4();
+            $model->id = strtoupper(Uuid::uuid4());
         });
     }
 
@@ -60,10 +60,11 @@ class ModelAbstract extends Model
                 return true;
             }
 
+            //TODO find a way to remove accents on mysql
             $query->where(
-                DB::raw("UNACCENT(UPPER($name))"),
+                DB::raw("UPPER($name)"),
                 'LIKE',
-                DB::raw("UNACCENT(UPPER('%{$value}%'))")
+                DB::raw("UPPER('%{$value}%')")
             );
 
             return true;
