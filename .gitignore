@@ -19,4 +19,4 @@ DS.Store
 postgis/
 public/js/
 public/css/
-# .env
+.env
