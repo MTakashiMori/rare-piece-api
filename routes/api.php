@@ -16,6 +16,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::group(['prefix' => 'v1'], function () {
 
+    Route::get('test', function() {
+        return view('api-test');
+    });
+
     Route::resource('department', 'DepartmentController');
     Route::resource('group', 'GroupController');
     Route::resource('category', 'CategoryController');
